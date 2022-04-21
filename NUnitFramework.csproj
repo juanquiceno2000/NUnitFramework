@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
+    <PackageReference Include="Selenium.Support" Version="4.1.0" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="WebDriverManager" Version="2.12.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.0.1" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Selenium.WebDriver" />
+    <None Remove="Selenium.Support" />
+    <None Remove="DotNetSeleniumExtras.WaitHelpers" />
+    <None Remove="WebDriverManager" />
+    <None Remove="Utilities\" />
+    <None Remove="UITests\" />
+    <None Remove="System.Configuration.ConfigurationManager" />
+    <None Remove="PageObject\" />
+    <None Remove="DotNetSeleniumExtras.PageObjects" />
+    <None Remove="DotNetSeleniumExtras.PageObjects.Core" />
+    <None Remove="UITests\SmokeTests\" />
+    <None Remove="UITests\RegressionTests\" />
+    <None Remove="Configuration\" />
+    <None Remove="ExtentReports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+    <Folder Include="UITests\" />
+    <Folder Include="PageObject\" />
+    <Folder Include="UITests\SmokeTests\" />
+    <Folder Include="UITests\RegressionTests\" />
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Utilities\TestData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+      <Copy SourceFiles="Configuration\App.config" DestinationFiles="$(OutDir)\testhost.dll.config" />
+  </Target>
+</Project>
