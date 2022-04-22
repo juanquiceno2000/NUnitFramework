@@ -363,3 +363,14 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 SeleniumWebdriver/Reports/Evidences/
+obj/Debug/net5.0/ref/NUnitFramework.dll
+obj/Debug/net5.0/NUnitFramework.pdb
+obj/Debug/net5.0/NUnitFramework.genruntimeconfig.cache
+obj/Debug/net5.0/NUnitFramework.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net5.0/NUnitFramework.dll
+obj/Debug/net5.0/NUnitFramework.csproj.CoreCompileInputs.cache
+obj/Debug/net5.0/NUnitFramework.assets.cache
+bin/Debug/net5.0/ref/NUnitFramework.dll
+bin/Debug/net5.0/NUnitFramework.pdb
+bin/Debug/net5.0/NUnitFramework.dll
+bin/Debug/net5.0/nunit_random_seed.tmp
