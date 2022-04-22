@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 
 namespace NUnitFramework
 {
-    public class RegressionTests : Base
+    public class RegressionTests : BaseSetUp
     { 
         [Test]
         public void Test5()

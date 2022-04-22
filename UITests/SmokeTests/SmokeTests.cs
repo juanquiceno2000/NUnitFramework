@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 
 namespace NUnitFramework
 {
-    public class SmokeTests : Base
+    public class SmokeTests : BaseSetUp
     { 
         [Test]
         public void Test1()
