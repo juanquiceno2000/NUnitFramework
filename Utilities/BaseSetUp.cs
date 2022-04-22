@@ -15,7 +15,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace NUnitFramework.Utilities
 {
-    public class Base
+    public class BaseSetUp
     {
         protected ExtentReports extent;
         protected ExtentTest test;

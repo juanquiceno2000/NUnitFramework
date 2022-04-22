@@ -1,0 +1,3 @@
+
+*.cache
+obj/Debug/net5.0/NUnitFramework.assets.cache
